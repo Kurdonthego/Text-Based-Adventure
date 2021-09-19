@@ -12,7 +12,10 @@
     #Armor to have 50ap (Light) and 100ap (Heavy)
     #Armor can be re-armored with metal, a hammer and a repair station
     #Armor can be found in police station, military vehicles, weaponry and can be built
-    /?jEzHUAnMLoOf
-  #
+  #Storage
+    #Will be able to optain a fanny pack(+2 storage) or a backpack(+5 storage)
+    #Will have 5 storage otherwise and can hold a combined amount of 50 rounds for weapons
+    #Shield, Spear and bigger guns take 2 storage spots
+    
     
 
