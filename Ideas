@@ -21,6 +21,28 @@
     #Will have a special slot for armor
   #Weapons
     #Weapons will consist of a Hand pistol, bolt action sniper rifle and an assault rifle
-    #
-    
+    #Hand held weapons will consist of a small knife, spear, an axe and a sword
+    #Ammo will be scarce and most of the ammo found will be for the Hand Pistol
+    #No levels or differences can be made with weapons
+      #Might be an add-on for a machete upgrade to the small knife(Required for upgrade: Metal, Crafting Bench and a Hammer)
+  #Tools
+    #Matches and an axe will be the first and only weapon the character receives at the start of the game
+    #A hammer is added but will only be able to be used at a crafting bench
+    #Axe can be used to cut down firewood
+    #Matches can be used to light said firewood
+    #Radio will be first item player find, can used to radio in supply drops and to record messages made by player_
+    #No other tools will be added to not allow confusion
+#MAP
+  #Locations
+    #In-game location will consist of a town of tents, police station, military camp, safe house, suburbs, tunnel system and will have a helipad for supply drops
+    #Supply drops can be called with a radio
+    #The undead will be throughout the map, mercenaries will be present
+    #Only civilian in the map will be the player_
+  #Map can be optained and has two levels, standard map(Paper and location) or advanced(Electronic map, compass and waypoints)
+    #Standard map has locations, and a arrow pointing north
+    #Electronic will be on a small watch that is wearable
+#PLOT
+  #World War III comenses, wipes out human race
+  #Infective virus turns the remaining into the undead
+  #
     
