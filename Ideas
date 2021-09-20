@@ -1,0 +1,20 @@
+#CS30
+#September 16, 2021
+#Kurdonthego
+#Adventure Game
+
+#CHARACTER
+  #Health/Armor
+    #Start with 100hp and can aquire armor from chests, corpses and shop
+    #Health can be regened with a medkit (50hp), health potions (20hp), food (5hp) and when resting (1hp/m)
+    #Resting can be done at a bed, couch, seat and any point there is no action or movement
+    #Armor will have a two level system light and heavy
+    #Armor to have 50ap (Light) and 100ap (Heavy)
+    #Armor can be re-armored with metal, a hammer and a repair station
+    #Armor can be found in police station, military vehicles, weaponry and can be built
+  #Storage
+    #Will be able to optain a fanny pack(+2 storage) or a backpack(+5 storage)
+    #Will have 5 storage otherwise and can hold a combined amount of 50 rounds for weapons
+    #Shield, Spear and bigger guns take 2 storage spots
+    
+    
