@@ -17,21 +17,23 @@ possible_directions = ["north", "east", "south", "west "]
 
 def menu_():
     """Definition for the menu"""
-    menu_c = str(input(possible_actions))
+    menu_c = str(input)(possible_actions)
     if menu_c == "Attack":
         print("Attacking!")
     elif menu_c == "Defend":
         print("Defending!")
     elif menu_c == "Explore":
+        # How the program will take your input for direction
         for direction in possible_directions:
                 print(f"* {direction}")
         directions_chosen = input("What direction would you like to go? ")
         if directions_chosen.lower() in possible_directions:
-            print(f"Go {directions_chosen}!")
+            print(f"Going {directions_chosen}!")
         else:
             print("Invalid direction, choose a direction!")
     elif menu_c == "Heal":
             print("Healing!")
+    # Quit function will work with the sys.exit command
     elif menu_c == "Quit":
         if menu_c == "Quit":
             choice_s = input("Are you sure you would like to exit? (yes) ")
