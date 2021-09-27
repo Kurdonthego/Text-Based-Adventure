@@ -25,7 +25,7 @@ def menu_():
     elif menu_c == "Explore":
         # How the program will take your input for direction
         for direction in possible_directions:
-                print(f"* {direction}")
+                print(f" {direction}")
         directions_chosen = input("What direction would you like to go? ")
         if directions_chosen.lower() in possible_directions:
             print(f"Going {directions_chosen}!")
