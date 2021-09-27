@@ -17,7 +17,7 @@ possible_directions = ["north", "east", "south", "west "]
 
 def menu_():
     """Definition for the menu"""
-    menu_c = str(input)(possible_actions)
+    menu_c = str((input)(possible_actions))
     if menu_c == "Attack":
         print("Attacking!")
     elif menu_c == "Defend":
