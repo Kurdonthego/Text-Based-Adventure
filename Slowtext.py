@@ -1,16 +1,12 @@
 from time import sleep
 
 
-def intro_text():
+def intro_text(text):
     """Prints title of game in a typewriter style"""
-    words = r"""
-
-Ibrahim is trash
-Ibrahim is trash
-Ibrahim is trash"""
+    words = text
 
     for char in words:
-        sleep(0.010)
+        sleep(0.25)
         print(char, end="", flush=True)
 
-intro_text()
+intro_text("balls")

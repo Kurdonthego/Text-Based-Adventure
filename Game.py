@@ -4,6 +4,7 @@
 # Name: Zana Osman
 # Description: Menu for Text-Based Adventure
 import sys
+from time import sleep
 
 # Starting of the menu, player_ choses username
 print("Text-Based Adventure Menu")
@@ -15,9 +16,20 @@ possible_actions = ["Attack", "Defend", "Explore", "Heal", "Quit"]
 possible_directions = ["north", "east", "south", "west "]
 
 
+def slow(text):
+    """Prints title of game in a typewriter style"""
+    words = str(text)
+
+    for char in words:
+        sleep(0.25)
+        print(char, end="", flush=True)
+    
+
 def menu_():
     """Definition for the menu"""
-    menu_c = str((input)(possible_actions))
+    for action in possible_actions:
+     print(f" {action}")
+    menu_c = str(input(" what action would u like to choose"))
     if menu_c == "Attack":
         print("Attacking!")
     elif menu_c == "Defend":
