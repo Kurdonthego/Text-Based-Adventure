@@ -1,6 +1,7 @@
 # Course: CS 30
 # Period: 3
 # Date created: September 21st, 2021
+# Date modified: September 28th, 2021
 # Name: Zana Osman
 # Description: Menu for Text-Based Adventure
 import sys
@@ -23,12 +24,12 @@ def slow(text):
     for char in words:
         sleep(0.25)
         print(char, end="", flush=True)
-    
+
 
 def menu_():
     """Definition for the menu"""
     for action in possible_actions:
-     print(f" {action}")
+        print(f" {action}")
     menu_c = str(input("What action would u like to choose "))
     if menu_c == "Attack":
         print("Attacking!")
