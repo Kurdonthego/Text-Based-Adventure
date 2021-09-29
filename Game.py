@@ -30,7 +30,7 @@ def menu_():
     """Definition for the menu"""
     for action in possible_actions:
         print(f" {action}")
-    menu_c = str(input("What action would u like to choose "))
+    menu_c = str(input("What action would u like to choose? "))
     if menu_c == "Attack":
         print("Attacking!")
     elif menu_c == "Defend":
