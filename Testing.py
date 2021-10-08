@@ -1,7 +1,7 @@
 # Course: CS 30
 # Period: 3
 # Date created: September 21st, 2021
-# Date modified: September 28th, 2021
+# Date modified: o, 2021
 # Name: Zana Osman
 # Description: Menu for Text-Based Adventure
 import sys
@@ -12,33 +12,45 @@ print("Text-Based Adventure Menu")
 print("Welcome user_")
 Username_ = input("What shall I call you? ")
 print("Ok " + Username_ + " what would you like to do?")
+print("Choose a character")
 # Actions and directions possible
 possible_actions = ["Attack", "Inventory", "Explore", "Heal", "Quit"]
 possible_directions = ["north", "east", "south", "west "]
-possible_characters = [""]
+possible_characters = ["Wonder boy, Beef"]
 
-inventory = {"": {"Small Knife":
-                              {"description": "Provides small damage and can be used for utilities",
-                               "damage": 5, "protection": 0},
-                              "Axe":
-                              {"description": "Can cut down wooden and metal doors",
-                               "damage": 15, "protection": 0},
-                              "Shield":
-                              {"description": "Provides protection against arrows, swords and bullets "
-                               "magically-empowered sword wielded",
-                               "damage": 0, "protection": 20}},
-                               "Shield": {"Batarang":
-                        {"description": "Provides protection against arrows, swords and bullets ",
-                         "damage": 10, "protection": 0},
-                        "Grapple hook":
-                        {"description": "pear-shooting spring-based device",
-                         "damage": 5, "protection": 0},
-                        "Sonic Bat Device":
-                        {"description":
-                         "high frequency emitter allowing the control of bats",
-                         "damage": 15, "protection": 100}},
-                        
+
+# defining the layout of the space ship
+# EnemyTile is where the user must fight attackers
+# SuppliesTile is where food, weapons, and first aid are stored
+# EscapePod is the end of the game
+# BoringTile is where nothing occurs
+# StartTile is where the game begins
+ship_map = [
+     ["EnemyTile", "SuppliesTile", "BoringTile"],
+     ["BoringTile", "BoringTile", "BoringTile"],
+     ["EnemyTile", "StartTile", "EnemyTile"],
+     ["EscapePod", "BoringTile", "BoringTile"]
+ ]
+ship_map[0][0] = "BoringTile"
+ship_map[3][0] = "BoringTile"
+ship_map[2][1] = "EscapePod"
+
+inventory_s = {"Small Knife":
+                                {"Description": "Provides small damage and can be used for utilities", "Damage": 5, "Protection": 0},
+                "Axe":
+                                {"Description": "Can cut down wooden and metal doors",
+                                "Damage": 15, "Protection": 0},
+                "Shield":
+                                {"Description": "Provides protection against arrows, swords and bullets",
+                                "Damage": 0, "Protection": 20}
              }
+
+def inventory_fnct():
+    for weapon in inventory_s:
+        print(f"{weapon}: ")
+        for item in inventory_s[weapon]:
+            print(f"{item} - {inventory_s[weapon][item]}")
+
 
 def slow(text):
     """Prints title of game in a typewriter style"""
@@ -57,11 +69,8 @@ def menu_():
     if menu_c == "Attack":
         print("Attacking!")
     elif menu_c == "Inventory":
-        print(character_ + "s" + " Inventory ")
-        for weapon in inventory:
-            print(f"{weapon}: ")
-        for item in weapon:
-            print(f"{item} - {weapon[item]}")
+        print("Inventory:")
+        inventory_fnct()
     elif menu_c == "Explore":
         # How the program will take your input for direction
         for direction in possible_directions:
