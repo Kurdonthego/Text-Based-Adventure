@@ -17,24 +17,7 @@ print("Choose a character")
 possible_actions = ["Attack", "Inventory", "Explore", "Heal", "Quit"]
 possible_directions = ["north", "east", "south", "west "]
 possible_characters = ["Wonder boy, Beef"]
-
-
-# defining the layout of the space ship
-# EnemyTile is where the user must fight attackers
-# SuppliesTile is where food, weapons, and first aid are stored
-# EscapePod is the end of the game
-# BoringTile is where nothing occurs
-# StartTile is where the game begins
-ship_map = [
-     ["EnemyTile", "SuppliesTile", "BoringTile"],
-     ["BoringTile", "BoringTile", "BoringTile"],
-     ["EnemyTile", "StartTile", "EnemyTile"],
-     ["EscapePod", "BoringTile", "BoringTile"]
- ]
-ship_map[0][0] = "BoringTile"
-ship_map[3][0] = "BoringTile"
-ship_map[2][1] = "EscapePod"
-
+# Starting inventory of character
 inventory_s = {"Small Knife":
                                 {"Description": "Provides small damage and can be used for utilities", "Damage": 5, "Protection": 0},
                 "Axe":
@@ -45,12 +28,15 @@ inventory_s = {"Small Knife":
                                 "Damage": 0, "Protection": 20}
              }
 
-def inventory_fnct():
+def start_inventory_fnct():
     for weapon in inventory_s:
-        print(f"{weapon}: ")
-        for item in inventory_s[weapon]:
+        print(f"{weapon}")
+        
+def inventory_description():
+    for weapon in inventory_s:
+        print(f"\n{weapon}:")
+    for item in inventory_s[weapon]:
             print(f"{item} - {inventory_s[weapon][item]}")
-
 
 def slow(text):
     """Prints title of game in a typewriter style"""
@@ -61,7 +47,8 @@ def slow(text):
         print(char, end="", flush=True)
 
 
-def menu_():
+# While loop for menu to stay active, will not close unless 'quit' is chosen
+while True:
     """Definition for the menu"""
     for action in possible_actions:
         print(f" {action}")
@@ -70,7 +57,12 @@ def menu_():
         print("Attacking!")
     elif menu_c == "Inventory":
         print("Inventory:")
-        inventory_fnct()
+        start_inventory_fnct()
+        inv_desc = input("Descriptions ")
+        if inv_desc == "yes":
+            inventory_description()
+        else:
+            print("No problemo")
     elif menu_c == "Explore":
         # How the program will take your input for direction
         for direction in possible_directions:
@@ -93,8 +85,3 @@ def menu_():
             print("Countinue!")
     else:
         print("Sorry that does not work, maybe choose a different option ")
-
-
-# While loop for menu to stay active, will not close unless 'quit' is chosen
-while True:
-    menu_()

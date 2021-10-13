@@ -15,8 +15,7 @@ possible_actions = ["Attack", "Defend", "Explore", "Heal", "Quit"]
 possible_directions = ["north", "east", "south", "west "]
 
 
-def menu_():
-    """Definition for the menu"""
+while True:
     menu_c = str(input(possible_actions))
     if menu_c == "Attack":
         print("Attacking!")
@@ -45,5 +44,3 @@ def menu_():
 
 
 # While loop for menu to stay active, will not close unless 'quit' is chosen
-while True:
-    menu_()

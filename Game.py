@@ -1,4 +1,4 @@
-# Course: CS 30
+Nn  n
 # Period: 3
 # Date created: September 21st, 2021
 # Date modified: September 28th, 2021
